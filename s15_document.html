@@ -36,7 +36,7 @@
 
             // 자바스크립트로 태그를 만들어서 동적으로 입력
             containerDiv.insertAdjacentHTML(
-                `beforeend`, // beforebegin, afterbegin, beforeend, afterend
+                `beforeend`, // beforebegin, afterbegin, beforeend, afterend; 시작태그 전, 후, 종료태그 전, 후에 데이터 입력
                 `<li>
                     <span>${value}</span>
                     <span style="color:red;cursor:pointer" onclick="deleteItem('${value}')"> X</span>
@@ -67,12 +67,12 @@
         // li 태그 추가 함수 실행
         setLiTag();
     }
-    
+
     function enterData(event) {
-        // 이벤트에서 엔터키일 경우 작동
+        // 이벤트에서 엔터키일 경우 작동, 엔터키의 키코드 값은 13임.
         if (event.keyCode === 13) {
             // input 태그 가져오기
-            const dataInput = document.getElementById("data");
+            const dataInput = document.getElementById("data"); // (window.document.getElementById), window.은 특별한 경우가 아닐 때 생략가능
             if( 
                 (dataInput.value != null && dataInput.value != "") &&
                 !array1.includes(dataInput.value)
@@ -92,6 +92,10 @@
 
     // 기본 li 태그 실행
     setLiTag();
+
+    // window.onload
+
+
 
 </script>
 </html>

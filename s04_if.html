@@ -20,13 +20,14 @@
 
         var question = Math.floor(Math.random() * 1000).toString();
         var answer = prompt(`${question}을 입력해주세요.`);
-
+        
+        //자스에서 if문은 {}와 ; 주의!
         if(answer === question){
 
             alert(`정확히 ${question}을 입력하셨습니다.`);
             callback();
 
-        } else if(answer === "exit"){
+        } else if(answer === "exit"){ //py에서는 elif
 
             alert(`질문을 종료합니다.`);
 

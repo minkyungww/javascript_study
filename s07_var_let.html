@@ -10,6 +10,8 @@
 </body>
 <script>
 
+    // var, let const
+
     // var의 특징과 문제점
 
     // 1. var로 선언할 경우 다시 한 번 var로 같은 변수명으로 선언이 가능하다
@@ -23,13 +25,13 @@
     // 지역 변수 사용에 문제가 발생할 수 있다.
     if(true){
         var temp2 = 3;
-        let temp3 = 3;
+        let temp3 = 3; 
     }
 
     // 에러가 발생하지 않는다 3
     console.log(temp2);
 
-    // 에러가 발생한다 temp3 is not defined
+    // 에러가 발생한다 temp3 is not defined, let temp3은 if문을 빠져나오면서 사라졌기 때문.
     console.log(temp3);
 
 </script>

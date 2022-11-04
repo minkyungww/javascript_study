@@ -41,15 +41,15 @@
             }
         }
 
-        // 옵셔널 체이닝
+        // 옵셔널 체이닝, 변수 뒤에 ?를 붙이면, 위에 null 값 여부를 확인하는 코드를 한 줄로 요약하는 거임.
         console.log(a?.b?.c);
 
-    // 6. nullish coalescing , 널 병합
+    // 6. nullish coalescing , 널 병합; NaN: Not a Number
 
         console.log(null || undefined || false || 0 || "" || NaN || "안녕하세요1");
 
         console.log(null ?? undefined ?? false ?? "안녕하세요2");
-
+        // false는 실제로 있는 값임(데이터가 있음). null, undefined는 값이 없음.  
 
 
 

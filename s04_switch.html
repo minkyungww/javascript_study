@@ -22,16 +22,17 @@
         // switch 문은 case를 탔을 경우 break를 해주지 않으면 아래 case로 이동함
         switch (answer){
             
-            case question :
+            case question : // if(answer === question) 랑 같음
 
                 alert(`정확히 ${question}을 입력하셨습니다.`); 
                 callback();
-                break;
+                break; //단, switch문은 break문을 넣어줘야함. 그래야 다음 문 안들어가고 빠져나옴.
 
-            case "exit" :
+            case "exit" :  // if(answer === 'exit') 랑 같음
 
                 alert(`질문을 종료합니다.`);
-                break;
+                break; //단, switch문은 break문을 넣어줘야함.
+
             
             default :
 
