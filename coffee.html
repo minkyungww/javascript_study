@@ -34,13 +34,23 @@
       // 메뉴리스트에서 타입이 맞는 것만 필터링
       const filterdSubMenuList = subMenuList.filter(
         (subMenu) => subMenu.type == type
-      );
+      ); // filter 는 결과값을 true false로 반환
+
+      // const func = () => alert("안녕");
+      // const func1 = () => false;
+      // const func2 = () => {
+      //       const data = "안녕";
+      //      retrun  data;
+      // }
+      // => 함수문은 한줄 함수는 중괄호 필요없음. 두 줄 이상일 경우 필요.
+      // 함수를 실행할때는 함쉬 뒤에 ()가 와야함.
+
 
       // 반복문으로 ul 안에 li를 넣는다
       filterdSubMenuList.forEach((subMenu) => {
         subMenuUl.insertAdjacentHTML(
           "beforeend",
-          `<li>${subMenu.menuName}</li>`
+          `<li>${subMenu.menuName}</li>` // 객체는 객체명만 넣으면 안됨.
         );
       });
     };
